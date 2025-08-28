@@ -2,33 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>VacationTracker – Official Submission</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#EBF4F9;color:#063970}
-    header{background:#154c79;color:#fff;padding:24px;text-align:center}
-    main{max-width:880px;margin:24px auto;padding:0 16px}
-    .card{background:#fff;border:1px solid #c7d9ea;border-radius:12px;padding:24px;margin-bottom:16px}
-    .btn{display:inline-block;background:#1e81b0;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600}
-    .btn:hover{opacity:.9}
-  </style>
-</head>
-<body>
-  <header>
-    <h1>VacationTracker</h1><!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
   <title>VacationTracker – Official Submission</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="VacationTracker Android app submission: description, repository link, and direct download to the signed APK." />
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#EBF4F9;color:#063970}
-    header{background:#154c79;color:#fff;padding:24px;text-align:center}
-    main{max-width:880px;margin:24px auto;padding:0 16px}
-    .card{background:#fff;border:1px solid #c7d9ea;border-radius:12px;padding:24px;margin-bottom:16px}
-    .btn{display:inline-block;background:#1e81b0;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600}
-    .btn:hover{opacity:.9}
-	footer{text-align:center;font-size:14px;padding:24px 16px 40px;color:#063970;opacity:.8;}
+    :root{
+      --bg:#EBF4F9;
+      --text:#063970;
+      --brand:#154c79;
+      --brand-2:#1e81b0;
+      --card:#ffffff;
+      --card-border:#c7d9ea;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    header{
+      background:var(--brand);
+      color:#fff;
+      padding:32px 16px;
+      text-align:center;
+    }
+    header h1{
+      margin:0 0 8px 0;
+      font-size:clamp(24px,3.5vw,40px);
+      letter-spacing:.3px;
+    }
+    header p{margin:0;opacity:.95}
+    main{
+      max-width:900px;
+      margin:28px auto;
+      padding:0 16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--card-border);
+      border-radius:14px;
+      padding:22px;
+      margin:0 0 16px 0;
+      box-shadow:0 1px 2px rgba(0,0,0,.03);
+    }
+    .btn{
+      display:inline-block;
+      background:var(--brand-2);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      transition:transform .05s ease, opacity .15s ease;
+    }
+    .btn:hover{opacity:.95}
+    .btn:active{transform:translateY(1px)}
+    .muted{opacity:.8}
+    footer{
+      text-align:center;
+      font-size:14px;
+      padding:24px 16px 40px;
+      color:#063970;
+      opacity:.8;
+    }
+    code{background:#f5f8fb;border:1px solid #e7eef6;padding:2px 6px;border-radius:6px}
+    .stack{display:flex;gap:10px;flex-wrap:wrap}
   </style>
 </head>
 <body>
@@ -36,13 +76,18 @@
     <h1>VacationTracker</h1>
     <p>Official submission page</p>
   </header>
+
   <main>
-    <section class="card">
+    <section class="card" id="about">
       <h2>About</h2>
-      <p>VacationTracker is a lightweight Android application that helps users organize and track their travel plans with ease. Designed for devices running Android 8.0 and above, it allows users to log vacations and excursions, set reminders, search itineraries, and export trip data in CSV format. Distributed as an APK, VacationTracker combines intuitive design with secure data handling to support seamless trip planning and reflection.</p>
+      <p>
+        VacationTracker is an Android application that helps users plan vacations and associated excursions.
+        It supports secure login, creation and editing of vacations with validation, optional reminders via system notifications,
+        excursion management, reactive search, and a reporting screen that can export a CSV for sharing.
+      </p>
     </section>
 
-   <section class="card" id="download">
+    <section class="card" id="download">
       <h2>Download</h2>
       <p class="muted">Install the signed release APK directly from GitHub Releases.</p>
       <p class="stack">
@@ -81,32 +126,5 @@
     // Set current year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-</body>
-</html>
-
-    <p>Official submission page</p>
-  </header>
-  <main>
-    <section class="card">
-      <h2>About</h2>
-      <p>VacationTracker is a lightweight Android application that helps users organize and track their travel plans with ease. </p>
-      <p>Designed for devices running Android 8.0 and above, it allows users to log vacations and excursions, set reminders, search itineraries, and</p>
-      <p>export trip data in CSV format. Distributed as an APK, VacationTracker combines intuitive design with secure data handling to support seamless trip planning and reflection.</p>
-    </section>
-
-    <section class="card">
-      <h2>Download</h2>
-      <p>
-        <a class="btn" href="https://github.com/tegetzer01/vacationtracker/releases/download/v6.0/app-release.apk" target="_blank" rel="noopener">
-          Download signed APK (v6.0)
-        </a>
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Repository</h2>
-      <p><a href="https://github.com/tegetzer01/vacationtracker">github.com/tegetzer01/vacationtracker</a></p>
-    </section>
-  </main>
 </body>
 </html>
