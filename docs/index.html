@@ -15,19 +15,89 @@
 </head>
 <body>
   <header>
+    <h1>VacationTracker</h1><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>VacationTracker – Official Submission</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#EBF4F9;color:#063970}
+    header{background:#154c79;color:#fff;padding:24px;text-align:center}
+    main{max-width:880px;margin:24px auto;padding:0 16px}
+    .card{background:#fff;border:1px solid #c7d9ea;border-radius:12px;padding:24px;margin-bottom:16px}
+    .btn{display:inline-block;background:#1e81b0;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn:hover{opacity:.9}
+	footer{text-align:center;font-size:14px;padding:24px 16px 40px;color:#063970;opacity:.8;}
+  </style>
+</head>
+<body>
+  <header>
     <h1>VacationTracker</h1>
     <p>Official submission page</p>
   </header>
   <main>
     <section class="card">
       <h2>About</h2>
-      <p>VacationTracker lets users plan vacations and excursions, with reminders, search, and CSV export.</p>
+      <p>VacationTracker is a lightweight Android application that helps users organize and track their travel plans with ease. Designed for devices running Android 8.0 and above, it allows users to log vacations and excursions, set reminders, search itineraries, and export trip data in CSV format. Distributed as an APK, VacationTracker combines intuitive design with secure data handling to support seamless trip planning and reflection.</p>
+    </section>
+
+   <section class="card" id="download">
+      <h2>Download</h2>
+      <p class="muted">Install the signed release APK directly from GitHub Releases.</p>
+      <p class="stack">
+        <a class="btn" aria-label="Download signed APK v6.0"
+           href="https://github.com/tegetzer01/vacationtracker/releases/download/v6.0/app-release.apk"
+           target="_blank" rel="noopener noreferrer">
+          Download signed APK (v6.0)
+        </a>
+        <a href="https://github.com/tegetzer01/vacationtracker/releases/tag/v6.0"
+           target="_blank" rel="noopener noreferrer">
+          Release page (fallback)
+        </a>
+      </p>
+      <p class="muted">
+        Tip: If the download doesn’t start, use the release page link above and click the APK under <em>Assets</em>.
+      </p>
+    </section>
+
+    <section class="card" id="repository">
+      <h2>Repository</h2>
+      <p>
+        Source code is available at
+        <a href="https://github.com/tegetzer01/vacationtracker" target="_blank" rel="noopener noreferrer">
+          github.com/tegetzer01/vacationtracker
+        </a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; <span id="y"></span> VacationTracker • Built with Material 3, Room, LiveData, and AlarmManager
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+    <p>Official submission page</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>About</h2>
+      <p>VacationTracker is a lightweight Android application that helps users organize and track their travel plans with ease. </p>
+      <p>Designed for devices running Android 8.0 and above, it allows users to log vacations and excursions, set reminders, search itineraries, and</p>
+      <p>export trip data in CSV format. Distributed as an APK, VacationTracker combines intuitive design with secure data handling to support seamless trip planning and reflection.</p>
     </section>
 
     <section class="card">
       <h2>Download</h2>
       <p>
-        <a class="btn" href="https://github.com/tegetzer01/vacationtracker/releases/download/v6.0/app-release.apk">
+        <a class="btn" href="https://github.com/tegetzer01/vacationtracker/releases/download/v6.0/app-release.apk" target="_blank" rel="noopener">
           Download signed APK (v6.0)
         </a>
       </p>
